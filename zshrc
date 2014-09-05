@@ -23,7 +23,7 @@ ZSH_THEME="lambda"
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# HIST_STAMPS="dd.mm.yyyy"
+HIST_STAMPS="dd.mm.yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
@@ -43,16 +43,12 @@ export PATH="/Users/alberto/.nvm/v0.10.30/bin:/usr/local/bin:/usr/local/sbin:/us
 # pip should only run if there is a virtualenv currently activated
 # export PIP_REQUIRE_VIRTUALENV=true
 
-syspip(){
-  PIP_REQUIRE_VIRTUALENV="" pip3 "$@"
-}
-
 # cache pip-installed packages to avoid re-downloading
 export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
 
-
 # Virtualenv Python
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
+# export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3 # Use default python
+
 source /usr/local/bin/virtualenvwrapper.sh
 
 # You may need to manually set your language environment
@@ -64,12 +60,6 @@ if [[ -n $SSH_CONNECTION ]]; then
 else
   export EDITOR='mvim'
 fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 alias sage=~/Desktop/Apps/sage/sage
 alias ipython='sage -ipython'
