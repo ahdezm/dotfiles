@@ -1,4 +1,14 @@
 ### set PATH
+PATH="/Users/alberto/.nvm/v0.10.30/bin"
+PATH="$PATH:/usr/local/bin"
+PATH="$PATH:/usr/local/sbin"
+PATH="$PATH:/usr/bin"
+PATH="$PATH:/bin"
+PATH="$PATH:/usr/sbin"
+PATH="$PATH:/sbin:/usr/local/bin"
+PATH="$PATH:/opt/X11/bin"
+PATH="$PATH:/usr/texbin"
+PATH="$PATH:/Users/alberto/.rvm/bin"
 
 export PATH
 
@@ -8,6 +18,7 @@ export PATH
 ### Python
 
 # Virtualenv Python
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3 # Use default python
 
 # pip should only run if there is a virtualenv currently activated
 # export PIP_REQUIRE_VIRTUALENV=true
