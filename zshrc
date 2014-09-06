@@ -12,21 +12,7 @@ ZSH_THEME="lambda"
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
 
-# Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 HIST_STAMPS="dd.mm.yyyy"
-
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
 
 plugins=(git brew npm bower)
 
@@ -34,23 +20,8 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-source zsh/env.zsh
-source zsh/aliases.zsh
-
-[[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh # This loads NVM
-
-# Pip Config
-
-# pip should only run if there is a virtualenv currently activated
-# export PIP_REQUIRE_VIRTUALENV=true
-
-# cache pip-installed packages to avoid re-downloading
-export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
-
-source /usr/local/bin/virtualenvwrapper.sh
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+source zsh/env.zsh # First set ENV variables
+source zsh/aliases.zsh # Then define aliases
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
