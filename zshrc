@@ -34,7 +34,8 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="/Users/alberto/.nvm/v0.10.30/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/texbin:/Users/alberto/.rvm/bin"
+source zsh/env.zsh
+source zsh/aliases.zsh
 
 [[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh # This loads NVM
 
@@ -45,9 +46,6 @@ export PATH="/Users/alberto/.nvm/v0.10.30/bin:/usr/local/bin:/usr/local/sbin:/us
 
 # cache pip-installed packages to avoid re-downloading
 export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
-
-# Virtualenv Python
-# export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3 # Use default python
 
 source /usr/local/bin/virtualenvwrapper.sh
 
@@ -60,6 +58,3 @@ if [[ -n $SSH_CONNECTION ]]; then
 else
   export EDITOR='mvim'
 fi
-
-alias sage=~/Desktop/Apps/sage/sage
-alias ipython='sage -ipython'
