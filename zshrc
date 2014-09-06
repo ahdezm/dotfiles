@@ -20,9 +20,13 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-source zsh/env.zsh # First set ENV variables
-source zsh/aliases.zsh # Then define aliases
+# Hardcoded dotfiles directory
+DOT=~/dotfiles
 
+source $DOT/zsh/env.zsh # First set ENV variables
+source $DOT/zsh/aliases.zsh # Then define aliases
+
+unset DOT
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
