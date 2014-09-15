@@ -1,14 +1,14 @@
 ### set PATH
 PATH="/Users/alberto/.nvm/v0.10.30/bin"
+PATH="$PATH:/Users/alberto/.rvm/bin"
 PATH="$PATH:/usr/local/bin"
 PATH="$PATH:/usr/local/sbin"
-PATH="$PATH:/usr/bin"
-PATH="$PATH:/bin"
-PATH="$PATH:/usr/sbin"
-PATH="$PATH:/sbin:/usr/local/bin"
-PATH="$PATH:/opt/X11/bin"
 PATH="$PATH:/usr/texbin"
-PATH="$PATH:/Users/alberto/.rvm/bin"
+PATH="$PATH:/opt/X11/bin"
+PATH="$PATH:/usr/bin"
+PATH="$PATH:/usr/sbin"
+PATH="$PATH:/bin"
+PATH="$PATH:/sbin"
 
 export PATH
 
