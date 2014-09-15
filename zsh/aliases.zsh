@@ -11,11 +11,19 @@ fi
 typeset -U path
 
 conda_start(){
-	# Add anaconda directory to PATH
-	path=("$HOME/anaconda/bin" "$path[@]")
+	if ! type conda > /dev/null; then
+		# Add anaconda directory to PATH
+		path=("$HOME/anaconda/bin" "$path[@]")		
+		PRE_CONDA_PROMPT=$PROMPT
+		export PROMPT="(conda)$PROMPT"
+	fi
 }
 
 conda_stop(){
-	# Remove anaconda direcotry from PATH
-	path=("${(@)path:#$HOME/anaconda/bin}")
+	if type conda > /dev/null; then
+		# Remove anaconda direcotry from PATH
+		path=("${(@)path:#$HOME/anaconda/bin}")
+		export PROMPT=$_OLD_CONDA_PROMPT
+		unset _OLD_CONDA_PROMPT
+	fi
 }
