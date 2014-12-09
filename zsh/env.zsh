@@ -18,7 +18,9 @@ export PATH
 ### Python
 
 # Virtualenv Python
+
 export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3 # Use default python
+export WORKON_HOME=$HOME/envs
 
 # pip should only run if there is a virtualenv currently activated
 # export PIP_REQUIRE_VIRTUALENV=true
@@ -27,4 +29,3 @@ export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3 # Use default python
 export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
 
 source /usr/local/bin/virtualenvwrapper.sh
-
