@@ -4,7 +4,9 @@ PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export PATH
 
 # If avalible, load nvm (Node Version Manager)
-[[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh # This loads NVM
+
+export NVM_DIR="/home/ahm/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 ### Python
 
